@@ -36,6 +36,26 @@ export default function Home() {
         </motion.nav>
       </header>
 
+      <motion.div
+        className="text-center px-4 py-2 md:py-3 flex-shrink-0"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.35, duration: 0.5 }}
+      >
+        <p className="font-serif text-sm sm:text-base md:text-lg text-black italic mb-1">
+          Ahead of the trend. Let&apos;s connect!
+        </p>
+        <p className="font-sans text-xs sm:text-sm text-neutral-500 space-x-3">
+          <span>
+            <a href="tel:+33780737685" className="hover:text-[#E8A0A0] transition-colors">+33 7 80 73 76 85</a>
+          </span>
+          <span>|</span>
+          <span>
+            <a href="mailto:anaghacreates@gmail.com" className="hover:text-[#E8A0A0] transition-colors">anaghacreates@gmail.com</a>
+          </span>
+        </p>
+      </motion.div>
+
       <section className="relative flex-1 mx-auto w-full max-w-5xl overflow-hidden flex items-center justify-center">
         <motion.img
           src="/hero.png"
