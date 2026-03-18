@@ -34,3 +34,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# backups
+/_backup_mannequin/
+*.backup
+*.backup2
+
+# claude
+.claude/

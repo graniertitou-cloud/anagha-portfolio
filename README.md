@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Anagha Bhandare — Portfolio
+
+Minimal, editorial portfolio site for Anagha Bhandare, Trend Analyst.
+
+Built with Next.js 14 (App Router), Tailwind CSS, and Framer Motion.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Update Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All editable content lives in the `config/` folder. No coding knowledge needed.
 
-## Learn More
+### Swap Hero Images (Google Drive)
 
-To learn more about Next.js, take a look at the following resources:
+1. Create a Google Drive folder with your images and set sharing to "Anyone with the link"
+2. Copy `.env.local.example` to `.env.local`
+3. Paste the folder URL into `NEXT_PUBLIC_IMAGES_FOLDER_URL`
+4. Optionally add a Google API key in `NEXT_PUBLIC_GOOGLE_API_KEY`
+5. Restart the dev server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Replace the CV PDF
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Drop your new PDF file into `public/cv.pdf` — it replaces automatically, no code changes.
 
-## Deploy on Vercel
+### Add/Edit Insights Reports
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit `config/reports.ts`:
+- Each report has a `title` and a `link` (Google Slides/Drive URL)
+- Add or remove entries from the array
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Add Clothing Items for the Mannequin
+
+Edit `config/wardrobe.ts`:
+- Add entries with `id`, `label`, `src` (image in `public/wardrobe/`), and `zone` (top/bottom/shoes/accessory)
+- Place PNG images in `public/wardrobe/`
+
+### Edit LinkedIn Bio
+
+Edit `config/linkedin.ts` — update the `bio` field.
+
+### Edit CV Bio
+
+Edit `config/cv.ts` — update `sectionTitle` and `bio`.
+
+### Edit Site Name, Buttons, Colors
+
+Edit `config/site.ts`.
+
+## Deploy to Vercel
+
+1. Push to GitHub
+2. Import the repo at [vercel.com/new](https://vercel.com/new)
+3. Add environment variables in the Vercel dashboard (same as `.env.local`)
+4. Deploy
+
+## Tech Stack
+
+- Next.js 14 (App Router)
+- Tailwind CSS
+- Framer Motion
+- @dnd-kit/core (drag and drop)
+- @vercel/analytics
