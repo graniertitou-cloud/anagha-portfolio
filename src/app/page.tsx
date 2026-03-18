@@ -37,9 +37,10 @@ export default function Home() {
       </header>
 
       <section className="relative flex-1 mx-auto w-full max-w-5xl overflow-hidden flex items-center justify-center">
-        <motion.div
-          className="bg-black"
-          style={{ aspectRatio: "9/16", height: "80%" }}
+        <motion.img
+          src="/hero.png"
+          alt="Fashion mood board"
+          className="object-contain max-w-full max-h-[80%] px-4"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
