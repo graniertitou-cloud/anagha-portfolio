@@ -9,7 +9,7 @@ export default function Home() {
     <main className="h-screen bg-white flex flex-col overflow-hidden">
       <header className="text-center pt-6 pb-3 md:pt-8 md:pb-4 px-4 flex-shrink-0">
         <motion.h1
-          className="font-serif text-4xl sm:text-5xl md:text-7xl text-black mb-1 tracking-wide"
+          className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-black mb-1 tracking-wide"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -25,7 +25,7 @@ export default function Home() {
           {siteConfig.subtitle}
         </motion.p>
         <motion.nav
-          className="flex justify-center gap-2 md:gap-3"
+          className="flex flex-wrap justify-center gap-2 md:gap-3 px-2"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
